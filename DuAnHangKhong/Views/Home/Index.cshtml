@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main>
+    <div class="page-section features" style="margin:300px 500px">
+        <h4> VietJet Air Flight List </h4>
+        <p>
+            <a href="~/Home/ThemMoiChuyenBay" style="float:right">Add New</a>
+        </p>
+
+
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>FlightNumber</th>
+                    <th>Date</th>
+                    <th>Place of departure</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FlightNo</td>
+                        <td>@item.Ngay</td>
+                        <td>@item.DiemDi</td>
+                        <td>@item.DiemDen</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
